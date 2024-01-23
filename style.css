@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90rem;
+    height: 64rem;
+    background: var(--Light-blue-light-blue-100, #F3F5FC);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main_logo {
+    box-sizing: border-box;
+    padding: 2.5rem 2.5rem;
+}
+
+.main_logo>img {
+    width: 7.5rem;
+    height: 3rem; 
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content>input {
+    width: 42.5rem;
+    outline-style: none;
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+    font-family: 'Inter';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 3rem */
+}
+
+.content__footer_message {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.content__footer_message > img {
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+    padding: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__footer_message > p {
+    align-items: center;
+    justify-content: center;
+
+    color: var(--Gray-gray-400, #495057);
+    font-family: 'Inter';
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.125rem */
+}
+
+.content__footer_buttons {
+    display: flex;
+    flex-direction: row;
+    width: 42.5rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.encrypt {
+    display: flex;
+    width: 20.5rem;
+    padding: 1.5rem;
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    border-radius: 1.5rem;
+    background: var(--Dark-blue-dark-blue-300, #0A3871);
+
+    flex: 1 0 0;
+
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.decrypt {
+    display: flex;
+    width: 20.5rem;
+    padding: 1.5rem;
+    align-items: flex-start;
+    gap: 0.5rem;
+    flex-shrink: 0;
+
+    border-radius: 1.5rem;
+    border: 1px solid var(--Dark-blue-dark-blue-300, #0A3871);
+    background: #D8DFE8;
+
+    flex: 1 0 0;
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+}
+
+.result {
+    width: 25rem;
+    height: 59rem;
+    border-radius: 2rem;
+    background: var(--White, #FFF);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.result > img {
+    width: 21rem;
+    height: 19rem;
+    flex-shrink: 0;
+}
+
+.result > h2 {
+    align-self: stretch;
+    color: var(--Gray-gray-500, #343A40);
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 1.8rem */
+}
+
+.result > p {
+    align-self: stretch;
+    color: var(--Gray-gray-400, #495057);
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.5rem */
+}
