@@ -6,13 +6,12 @@
 }
 
 .container {
-    width: 90rem;
-    height: 64rem;
+    width: 100vw;
+    height: 100vh;
     background: var(--Light-blue-light-blue-100, #F3F5FC);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .main_logo {
@@ -28,18 +27,22 @@
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    margin-top: 10rem;
+    margin-right: 3rem;
 }
 
-.content>input {
+.content>textarea {
+    
     width: 42.5rem;
-    outline-style: none;
+    height: 60vh;
+    border: none;
     color: var(--Dark-blue-dark-blue-300, #0A3871);
     font-family: 'Inter';
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 3rem */
+    line-height: 100%; /* 3rem */
+    resize: none;
 }
 
 .content__footer_message {
@@ -53,8 +56,8 @@
     height: 1rem;
     box-sizing: border-box;
     padding: 0.5;
-    align-items: center;
-    justify-content: center;
+
+    
 }
 
 .content__footer_message > p {
@@ -121,8 +124,6 @@
 }
 
 .result {
-    width: 25rem;
-    height: 59rem;
     border-radius: 2rem;
     background: var(--White, #FFF);
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
