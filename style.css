@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-* {
-    margin: 0;
+body, html, div {
+    position: relative;
     padding: 0;
-}
+    margin: 0;
+  }
 
 .container {
     width: 100vw;

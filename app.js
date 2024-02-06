@@ -1,19 +1,32 @@
+function limparTexto(){
+    document.querySelector('input').value = '';
+};
 
-
-function encrypt(){
-    let texto = document.querySelector('textarea').value.toLocaleLowerCase();
-    
-    if (texto){
-        texto = texto.replace('e','enter');
-        texto = texto.replace('i','imes');
-        texto = texto.replace('a','ai');
-        texto = texto.replace('o','ober');
-        texto = texto.replace('u','ufat');
-
-        document.querySelector('textarea').value = '';
-        document.getElementById('result__img').setAttribute('hidden','');
-        document.getElementById('result__h2').setAttribute('hidden','');
-        document.getElementById('result__p').innerHTML = texto;
-        
+function criptografar(){
+    let textoASerCriptografado = document.querySelector('input').value.toLowerCase();
+    if (textoASerCriptografado){
+        textoASerCriptografado = textoASerCriptografado.replace('e', 'enter');
+        textoASerCriptografado = textoASerCriptografado.replace('i', 'imes');
+        textoASerCriptografado = textoASerCriptografado.replace('a', 'ai');
+        textoASerCriptografado = textoASerCriptografado.replace('o', 'ober');
+        textoASerCriptografado = textoASerCriptografado.replace('u', 'ufat');
+        escreverResultado(textoASerCriptografado);
     }
+}
+
+function criptografar(){
+    let textoASerDescriptografado = document.querySelector('input').value.toLowerCase();
+    if (textoASerDescriptografado){
+        textoASerDescriptografado = textoASerDescriptografado.replace('enter', 'e');
+        textoASerDescriptografado = textoASerDescriptografado.replace('imes', 'i');
+        textoASerDescriptografado = textoASerDescriptografado.replace('ai', 'a');
+        textoASerDescriptografado = textoASerDescriptografado.replace('ober', 'o');
+        textoASerDescriptografado = textoASerDescriptografado.replace('ufat', 'u');
+        escreverResultado(textoASerDescriptografado);
+    }
+}
+function escreverResultado(texto){
+    document.getElementById("result__image").setAttribute('hidden','');
+    document.getElementById('result__message').setAttribute('hidden','');
+    document.getElementById('result__message_title').innerHTML = texto;
 }
