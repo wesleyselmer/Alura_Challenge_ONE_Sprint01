@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-body, html, div {
+* {
     position: relative;
     padding: 0;
     margin: 0;
@@ -28,15 +28,15 @@ body, html, div {
 .content {
     display: flex;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 7rem;
     margin-right: 3rem;
 }
 
-.content>textarea {
-    
+.content>textarea {    
     width: 42.5rem;
     height: 60vh;
     border: none;
+    border-radius: 1rem;
     color: var(--Dark-blue-dark-blue-300, #0A3871);
     font-family: 'Inter';
     font-size: 2rem;
@@ -49,7 +49,6 @@ body, html, div {
 .content__footer_message {
     display: flex;
     flex-direction: row;
-
 }
 
 .content__footer_message > img {
@@ -57,13 +56,12 @@ body, html, div {
     height: 1rem;
     box-sizing: border-box;
     padding: 0.5;
-
-    
 }
 
 .content__footer_message > p {
     align-items: center;
     justify-content: center;
+    margin-bottom: 1rem;
 
     color: var(--Gray-gray-400, #495057);
     font-family: 'Inter';
@@ -125,20 +123,29 @@ body, html, div {
 }
 
 .result {
+    width: 30%;
+    
     border-radius: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
     background: var(--White, #FFF);
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
 }
 
-.result > img {
+.result__img {
+    display: flex;
+    justify-content: center;
+}
+
+.result__img > img {
     width: 21rem;
     height: 19rem;
-    flex-shrink: 0;
+    margin-bottom: 1rem;
 }
 
 .result > h2 {
@@ -149,7 +156,7 @@ body, html, div {
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; /* 1.8rem */
+    line-height: 1.8rem;
 }
 
 .result > p {
@@ -160,5 +167,74 @@ body, html, div {
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 1.5rem */
+    line-height: 1.5rem;
+}
+
+.result__button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+
+.copiar {
+    width: 10rem;
+    height: 3rem;
+
+    border: 1px solid var(--Dark-blue-dark-blue-300, #0A3871);
+    border-radius: 1.5rem;
+    background: rgb(172, 170, 170);
+
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        margin-top: 0;
+        margin-left: 3rem;
+    }
+
+    .result {
+        margin-bottom: 0;
+    }
+
+    .result > img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .main_logo {
+        padding: 1rem;
+    }
+
+    .content>textarea {
+        width: 21rem;
+        height: 40vh;
+    }
+
+    .content__footer_buttons {
+        flex-direction: column;
+    }
+
+    .result {
+        width: 23rem;
+        height: 12rem;
+    }
 }

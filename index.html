@@ -16,8 +16,9 @@
             <textarea 
                 id="content__text" 
                 placeholder="Digite seu texto"
-                rows="4"
-                cols="50"
+                spellcheck="false"
+                rows="7"
+                cols="40"
             ></textarea>
             <div class="content__footer">
                 <div class="content__footer_message">
@@ -31,9 +32,14 @@
             </div>
         </div>
         <div class="result">
-            <img id="result__img" src="assets/img/High quality products 1 1.png" alt="Nenhuma mensagem encontrada">
+            <div class="result__img">
+                <img id="result__img" src="assets/img/High quality products 1 1.png" alt="Nenhuma mensagem encontrada">
+            </div>
             <h2 id="result__h2">Nenhuma mensagem encontrada</h2>
             <p id="result__p">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <div class="result__button">
+                <button class="copiar" id="btn_copiar" onclick="copiar()" hidden>Copiar</button>
+            </div>
         </div>
     </div>    
 </body>
