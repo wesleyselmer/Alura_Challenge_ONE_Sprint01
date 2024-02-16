@@ -5,13 +5,15 @@ function limparTexto(){
 function criptografar(){
     let textoASerCriptografado = document.querySelector('textarea').value.toLowerCase();
     if (textoASerCriptografado){
-        textoASerCriptografado = textoASerCriptografado.replace('e', 'enter');
-        textoASerCriptografado = textoASerCriptografado.replace('i', 'imes');
-        textoASerCriptografado = textoASerCriptografado.replace('a', 'ai');
-        textoASerCriptografado = textoASerCriptografado.replace('o', 'ober');
-        textoASerCriptografado = textoASerCriptografado.replace('u', 'ufat');
+        textoASerCriptografado = textoASerCriptografado.replaceceAll('e', 'enter');
+        alert(textoASerCriptografado)
+        textoASerCriptografado = textoASerCriptografado.replaceAll('i', 'imes');
+        textoASerCriptografado = textoASerCriptografado.replaceAll('a', 'ai');
+        textoASerCriptografado = textoASerCriptografado.replaceAll('o', 'ober');
+        textoASerCriptografado = textoASerCriptografado.replaceAll('u', 'ufat');
         escreverResultado(textoASerCriptografado);
         document.getElementById("btn_copiar").removeAttribute('hidden');
+        //document.getElementsByClassName("result__h2")[0].setAttribute("style","height: 30rem");
         limparTexto();
     }
 }
@@ -19,11 +21,11 @@ function criptografar(){
 function descriptografar(){
     let textoASerDescriptografado = document.querySelector('textarea').value.toLowerCase();
     if (textoASerDescriptografado){
-        textoASerDescriptografado = textoASerDescriptografado.replace('enter', 'e');
-        textoASerDescriptografado = textoASerDescriptografado.replace('imes', 'i');
-        textoASerDescriptografado = textoASerDescriptografado.replace('ai', 'a');
-        textoASerDescriptografado = textoASerDescriptografado.replace('ober', 'o');
-        textoASerDescriptografado = textoASerDescriptografado.replace('ufat', 'u');
+        textoASerDescriptografado = textoASerDescriptografado.replaceAll('enter', 'e');
+        textoASerDescriptografado = textoASerDescriptografado.replaceAll('imes', 'i');
+        textoASerDescriptografado = textoASerDescriptografado.replaceAll('ai', 'a');
+        textoASerDescriptografado = textoASerDescriptografado.replaceAll('ober', 'o');
+        textoASerDescriptografado = textoASerDescriptografado.replaceAll('ufat', 'u');
         escreverResultado(textoASerDescriptografado);
         document.getElementById("btn_copiar").removeAttribute('hidden');
         limparTexto();
