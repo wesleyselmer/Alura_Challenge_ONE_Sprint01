@@ -38,12 +38,32 @@
             <div class="result__h2">
                 <h2 id="result__h2">Nenhuma mensagem encontrada</h2>
             </div>
-            <p id="result__p">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <div class="result__text">
+                <textarea 
+                    id="result__textarea" 
+                    placeholder="Digite um texto que você deseja criptografar ou descriptografar."
+                    spellcheck="false"
+                    rows="7"
+                    cols="40"
+                    hidden
+                ></textarea>
+            </div>
             <div class="result__button">
                 <button class="copiar" id="btn_copiar" onclick="copiar()" hidden>Copiar</button>
             </div>
         </div>
-    </div>    
+    </div>  
+    <footer class="rodape">
+        <h6>Desenvolvido por Wesley Selmer | Challenge Alura One</h6>
+        <div class="links">
+            <a class="linksNavegacao" href="https://github.com/wesleyselmer" target="_blank">
+                <img src="./assets/img/github1.png">
+            </a>
+            <a class="linksNavegacao" href="https://www.linkedin.com/in/wesley-selmer-9ab6151ab/" target="_blank">
+                <img src="./assets/img/linkedin1.png">
+            </a>
+        </div>
+    </footer>  
 </body>
 
 <script src="app.js" defer></script>

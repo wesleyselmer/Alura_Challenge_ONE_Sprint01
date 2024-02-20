@@ -8,32 +8,35 @@
 
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     background: var(--Light-blue-light-blue-100, #F3F5FC);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .main_logo {
-    box-sizing: border-box;
-    padding: 2.5rem 2.5rem;
+    width: 5vw;
+    margin-top: 1rem;
+    margin-left: -1rem;
 }
 
 .main_logo>img {
-    width: 7.5rem;
-    height: 3rem; 
+    width: 6vw;
+    height: 4vh; 
 }
 
 .content {
+    width: 45vw;
+    height: 80vh;
+    margin-top: 3rem;
+    margin-right: 3rem;
     display: flex;
     flex-direction: column;
-    margin-top: 7rem;
-    margin-right: 3rem;
 }
 
 .content>textarea {    
-    width: 42.5rem;
     height: 60vh;
     border: none;
     border-radius: 1rem;
@@ -123,22 +126,23 @@
 }
 
 .result {
-    width: 30%;
-    
+    width: 45vw;
+    height: 80vh;
     border-radius: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
 
     background: var(--White, #FFF);
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
 }
 
 .result__img {
+    width: 45vw;
     display: flex;
     justify-content: center;
 }
@@ -150,7 +154,7 @@
 }
 
 .result__h2 {
-    width: 100%;
+    width: 45vw;
     display: inline-block;
     white-space: normal;
     text-align: center;
@@ -167,15 +171,21 @@
     line-height: 1.8rem;
 }
 
-.result > p {
-    align-self: stretch;
-    color: var(--Gray-gray-400, #495057);
-    text-align: center;
-    font-family: Inter;
-    font-size: 1rem;
+.result__text {
+    padding: 1rem;
+}
+
+#result__textarea {
+    border: none;
+    border-radius: 1rem;
+    margin: 2px;
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+    font-family: 'Inter';
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 100%; /* 3rem */
+    resize: none;
 }
 
 .result__button {
@@ -203,48 +213,118 @@
     line-height: normal;
 }
 
+.rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    margin-top: 15px;
+    background: #050345;
+    color: #0d085a;
+}
+
+.rodape h6{
+    font-size: 1rem;
+    color: #00d4ff;
+}
+button:hover{
+    background-color: #00d4ff;
+    transition: 0.5s all;
+}
+
 @media screen and (max-width: 768px){
     .container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .main_logo>img {
+        width: 14vw;
     }
 
     .content {
-        margin-top: 0;
+        width: 90vw;
+        height: 50vh;
+        margin-top: 1rem;
         margin-left: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .content > textarea {
+        height: 40vh;
     }
 
     .result {
+        width: 90vw;
+        height: 20vh;
+
         margin-bottom: 0;
-        width: auto;
-        height: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0;
+
+        flex-wrap: nowrap;
+        align-content: normal;
     }
 
     .result__img {
         display: none;
+        width: 0;
+        height: 0;
     }
+
+    .result__h2 {
+        width: 100%;
+    }
+
+    #result__textarea {
+        width: 80vw;
+        height: 10vh;
+    }
+
+    /* .copiar {
+        width: 1rem;
+        height: 1rem;
+    } */
 }
 
 @media screen and (max-width: 380px) {
-    .content {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    
-    .main_logo {
-        padding: 1rem;
+    .container {
+        width: 100vw;
+        height: 90vh;
     }
 
-    .content>textarea {
-        width: 21rem;
-        height: 40vh;
+    .main_logo {
+        width: 35vw;
+    }
+
+    .main_logo>img {
+        width: 32vw;
+    }
+
+    .content {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .content > textarea {
+        height: 30vh;
     }
 
     .content__footer_buttons {
+        width: 80vw;
         flex-direction: column;
     }
 
+    .encrypt {
+        width: 18.8rem;
+    }
+
+    .decrypt {
+        width: 18.8rem;
+    }
+
     .result {
-        width: 23rem;
-        height: 12rem;
+        width: 80vw;
     }
 }
